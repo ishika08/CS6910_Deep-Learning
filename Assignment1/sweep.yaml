@@ -1,0 +1,24 @@
+program: main.py
+method: random
+metrics:
+  name: val_acc
+  goal: maximize
+parameters:
+  epochs:
+    values: [5, 10]
+  n_hlayers:
+    values: [3, 4, 5]
+  hlayer_size:
+    values: [32, 64, 128]
+  l_rate:
+    values: [0.001, 0.0001]
+  optimizer:
+    values: ["sgd", "mgd", "nag", "rmsprop", "adam", "nadam"]
+  batch_size:
+    values: [16, 32, 64]
+  initializer:
+    values: ["xavier", "random"]
+  activation:
+    values: ["sigmoid", "tanh", "relu"]
+  loss:
+    values: ["cross_entropy", "squared_error"]
